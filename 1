@@ -30,7 +30,7 @@ public class NotePadInitialTests {
         driver.get("https://anotepad.com/");
         driver.findElement(By.id("edit_title")).sendKeys("My First Note");
         driver.findElement(By.id("btnSaveNote")).click();
-        wait.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector(""), "You have saved your note as a"));
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector(".alert.alert-warning"), "You have saved your note as a"));
 
         driver.findElement(By.cssSelector(".delete")).click();
 
